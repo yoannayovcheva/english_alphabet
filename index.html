@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The English Alphabet</title>
+    <link rel="icon" type="image/x-icon" href="media/UK.ico"> 
+    <style>
+        @font-face {
+            font-family: 'Sassoon Primary Std'; /* Name of the font */
+            src: url('fonts/sassoon-primary-std.otf') format('opentype'); /* Path to the font file */
+        }
+
+        @font-face {
+            font-family: 'Andika'; /* Name of the font */
+            src: url('fonts/Andika-Bold.ttf') format('truetype'); /* Path to the font file */
+        }
+        body {
+            background-color: #0a3f16;
+            color: #fff;
+            font-family: 'Sassoon Primary Std', 'Andika', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            margin-bottom: 20px; /* Space between heading and buttons */
+            font-size: 40px; /* Size of the heading */
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+        }
+        button {
+            background-color: #1d5a2d;
+            color: #fff;
+            border: none;
+            padding: 40px; /* Increased padding for larger buttons */
+            font-family: 'Sassoon Primary Std', 'Andika', sans-serif;
+            font-size: 32px; /* Increased font size */
+            font-weight: bold; /* Bold font for button text */
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2f902a;         
+        }
+    </style>
+</head>
+<body>
+    <h1>The English Alphabet</h1>
+    <div class="container">
+        <!-- Combined Uppercase and Lowercase Letters -->
+        <button onclick="playSound('A')">A a</button>
+        <button onclick="playSound('B')">B b</button>
+        <button onclick="playSound('C')">C c</button>
+        <button onclick="playSound('D')">D d</button>
+        <button onclick="playSound('E')">E e</button>
+
+        <button onclick="playSound('F')">F f</button>
+        <button onclick="playSound('G')">G g</button>
+        <button onclick="playSound('H')">H h</button>
+        <button onclick="playSound('I')">I i</button>
+        <button onclick="playSound('J')">J j</button>
+
+        <button onclick="playSound('K')">K k</button>
+        <button onclick="playSound('L')">L l</button>
+        <button onclick="playSound('M')">M m</button>
+        <button onclick="playSound('N')">N n</button>
+        <button onclick="playSound('O')">O o</button>
+
+        <button onclick="playSound('P')">P p</button>
+        <button onclick="playSound('Q')">Q q</button>
+        <button onclick="playSound('R')">R r</button>
+        <button onclick="playSound('S')">S s</button>
+        <button onclick="playSound('T')">T t</button>
+        
+        <button onclick="playSound('U')">U u</button>
+        <button onclick="playSound('V')">V v</button>
+        <button onclick="playSound('W')">W w</button>
+        
+        <button onclick="playSound('X')">X x</button>
+        <button onclick="playSound('Y')">Y y</button>
+        <button onclick="playSound('Z')">Z z</button>
+    </div>
+
+    <script>
+        function playSound(letter) {
+            const audio = new Audio(`letter_sounds/${letter}.ogg`);
+            audio.play();
+        }
+    </script>
+</body>
+</html>
